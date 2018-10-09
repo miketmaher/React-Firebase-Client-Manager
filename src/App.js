@@ -11,6 +11,7 @@ import Dashboard from './components/layout/Dashboard';
 import AddClient from './components/clients/AddClient';
 import EditClient from './components/clients/EditClient';
 import ClientDetails from './components/clients/ClientDetails';
+import Settings from './components/settings/Settings';
 import Login from './components/auth/Login';
 
 import './App.css';
@@ -45,6 +46,11 @@ class App extends Component {
                 <Route
                   path="/client/:id"
                   component={UserIsAuthenticated(ClientDetails)}
+                />
+                <Route
+                  exact
+                  path="/settings"
+                  component={UserIsAuthenticated(Settings)}
                 />
               </Switch>
             </div>
